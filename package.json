@@ -1,0 +1,28 @@
+{
+  "name": "expressjs-crash-course-brad-traversy",
+  "version": "1.0.0",
+  "description": "Express JS crash course taught by Brad Traversy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgreen44/expressjs-crash-course-brad-traversy.git"
+  },
+  "keywords": [
+    "Express",
+    "JS",
+    "ExpressJS",
+    "Brad",
+    "Traversy",
+    "Jason",
+    "Green"
+  ],
+  "author": "Jason Green",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jgreen44/expressjs-crash-course-brad-traversy/issues"
+  },
+  "homepage": "https://github.com/jgreen44/expressjs-crash-course-brad-traversy#readme"
+}
