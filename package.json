@@ -4,7 +4,9 @@
   "description": "Express JS crash course taught by Brad Traversy",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index",
+    "dev": "nodemon index"
   },
   "repository": {
     "type": "git",
@@ -24,5 +26,12 @@
   "bugs": {
     "url": "https://github.com/jgreen44/expressjs-crash-course-brad-traversy/issues"
   },
-  "homepage": "https://github.com/jgreen44/expressjs-crash-course-brad-traversy#readme"
+  "homepage": "https://github.com/jgreen44/expressjs-crash-course-brad-traversy#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }

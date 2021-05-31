@@ -26,5 +26,10 @@ https://www.facebook.com/traversymedia
 https://www.twitter.com/traversymedia
 https://www.instagram.com/traversymedia
 
-Command Lines:
-npm init
+Command Lines:\
+npm init\
+npm i express\
+npm i -D nodemon\
+npm run dev\
+npm i moment
+
