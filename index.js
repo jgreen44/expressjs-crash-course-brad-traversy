@@ -1,7 +1,8 @@
 const express = require('express');
 const path = require('path');
-const members = require('./Members')
-const logger = require('./middleware/logger')
+const exphbs = require('express-handlebars');
+const logger = require('./middleware/logger');
+const members = require('./Members');
 const app = express();
 
 // app.get('/', (req, res) => {
@@ -9,19 +10,32 @@ const app = express();
 //     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 // })
 
-
-
 // Init middleware function
-app.use(logger);
+// app.use(logger);
 
-// Gets all members
-app.get('/api/members', (req, res) => {
-    res.json(members);
+// Handlebars Middleware
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+// Body Parser Middleware
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
+
+// Note: You do not usually have template and static pages together
+
+// Homepage route (template pages)
+app.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Member App',
+        members: members
+    })
 })
 
-// Set static folder
+// Set static folder (static pages)
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Members API Routes
+app.use('/api/members', require('./routes/api/members'))
 
 const PORT = process.env.PORT || 5000;
 
